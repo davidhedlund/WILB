@@ -1,4 +1,4 @@
-# Website Incompatibilities for Libre Browsers (WILB)
+# Websites Incompatible with Libre Browsers (WILB)
 
 Welcome to the **WILB** issue tracker repository!
 
