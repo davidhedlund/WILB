@@ -21,6 +21,8 @@ While users routinely open site breakage reports on official libre browser issue
 - 🔒 **Proprietary & DRM Requirements:** Sites that refuse to function without non-free components (e.g., Widevine DRM) or non-free proprietary client-side scripts.
 - 🏢 **Vendor Lock-In & Hardcoded Assumptions:** Sites relying on non-standard, proprietary web APIs or hardcoded infrastructure tied exclusively to Google or Mozilla services.
 
+> 💡 **Single-Barrier Rule:** **Any site-side barrier is grounds for logging.** A website does not need to be entirely broken to qualify for WILB. Whether an issue is large (e.g., a total domain block, broken login flow, or non-functional video player) or small (e.g., an artificial User-Agent warning banner, broken navigation button, or site-side layout glitch), a single site-side barrier makes the site fully eligible for reporting.
+
 ### What We Do NOT Track (Out of Scope)
 - 🚫 **Browser Engine Bugs:** C++/JS code bugs, rendering regressions, or crashes inside the libre browser itself (please report these directly to the respective browser maintainers).
 - 🚫 **Upstream Engine Bugs:** Issues present in official upstream Firefox or Chromium releases.
