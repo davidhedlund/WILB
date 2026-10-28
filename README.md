@@ -2,7 +2,9 @@
 
 Welcome to the **WILB** issue tracker repository!
 
-This project serves as a centralized registry to document, triage, and track **site-side barriers**—websites that actively block, degrade, or restrict access for users running libre (free software) web browsers.
+This registry tracks websites whose developers or operators have introduced **site-side barriers** that discriminate against libre (free software) browsers. Following the principle that a system is not fully free if it contains even a fraction of non-free code, a website is not considered compatible with libre browsers unless it is **100% compatible**. 
+
+WILB documents and triages websites that include, require, or enforce non-free web practices—rejecting artificial User-Agent blocks, non-free JavaScript requirements, non-free DRM/binary blobs, vendor lock-in, and proprietary API dependencies.
 
 ---
 
@@ -21,7 +23,7 @@ While users routinely open site breakage reports on official libre browser issue
 - 🔒 **Proprietary & DRM Requirements:** Sites that refuse to function without non-free components (e.g., Widevine DRM) or non-free proprietary client-side scripts.
 - 🏢 **Vendor Lock-In & Hardcoded Assumptions:** Sites relying on non-standard, proprietary web APIs or hardcoded infrastructure tied exclusively to Google or Mozilla services.
 
-> 💡 **Single-Barrier Rule:** **Any site-side barrier is grounds for logging.** A website does not need to be entirely broken to qualify for WILB. Whether an issue is large (e.g., a total domain block, broken login flow, or non-functional video player) or small (e.g., an artificial User-Agent warning banner, broken navigation button, or site-side layout glitch), a single site-side barrier makes the site fully eligible for reporting.
+> 💡 **Single-Barrier Rule:** **Any site-side barrier is grounds for logging.** Just as software is not free if even 0.1% of it is non-free, a website is not considered compatible with libre browsers unless it is **100% compatible**. A website does not need to be entirely unusable to qualify for WILB—whether an issue is large (e.g., a total domain block, broken login flow, or non-functional video player) or small (e.g., an artificial User-Agent warning banner, broken navigation button, or site-side layout glitch), any single site-side barrier makes the site fully eligible for reporting.
 
 ### What We Do NOT Track (Out of Scope)
 - 🚫 **Browser Engine Bugs:** C++/JS code bugs, rendering regressions, or crashes inside the libre browser itself (please report these directly to the respective browser maintainers).
