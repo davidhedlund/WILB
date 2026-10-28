@@ -32,30 +32,37 @@ While users routinely open site breakage reports on official libre browser issue
 
 ---
 
-## 🧩 User-Installed Add-ons Are Excluded
+## 🧩 Stock Browser Add-ons & Default Configurations
 
-While extensions (such as **uBlock Origin**, **NoScript**, or user-configured script blockers) can frequently cause websites to break or alter functionality, **WILB does not track site barriers caused by user-installed add-ons**.
+To ensure triage accuracy, WILB distinguishes between **bundled stock add-ons** and **user-installed extensions**.
+
+---
+
+### 🟢 In-Scope: Bundled Default Add-ons
+
+An add-on-related site barrier **IS eligible** for WILB logging **only if**:
+
+- **Stock Profile Standard:** The extension/add-on is **bundled and enabled by default** in the clean, stock installation of the libre browser (e.g., **GNU LibreJS in GNU IceCat**).
+- **Functional Impact:** The add-on actively interacts with web page content or network traffic (e.g., script blockers, header modifiers). *Visual themes, language packs, and search engine defaults are strictly excluded.*
+- **Clean Environment:** The site barrier occurs on a **fresh user profile using default settings**, without any modified configuration, custom filter rules, or third-party extensions.
+
+> 💡 **Note on Reporting:** When filing an issue caused by a pre-installed add-on, please specify whether the site functions when that default add-on is temporarily disabled. This helps isolate whether the barrier stems from site-side script demands or browser-level User-Agent/engine policies.
+
+---
+
+### 🚫 Out-of-Scope: User-Installed Add-ons & WebExtensions
+
+While extensions (such as **uBlock Origin**, **NoScript**, or user-configured script blockers) frequently cause websites to break or alter functionality, **WILB does not track site barriers caused by user-installed add-ons**.
 
 We exclude user-installed extensions for two primary reasons:
 
 1. **Extension Barriers Belong in Extension Trackers:**  
-   When a website breaks due to a user-added extension (for example, uBlock Origin filtering a required asset or custom NoScript rules), the root cause lies in the extension's ruleset, not the browser engine.
+   When a website breaks due to a user-added extension (e.g., uBlock Origin filtering a required asset or custom NoScript rules), the root cause lies in the extension's ruleset, not the browser engine or site-side browser discrimination.
    * **Where fixes occur:** Extension maintainers resolve site breakages by updating global blocklists or adjusting default whitelist rules.
-   * **Official reporting channels:** Extension projects maintain dedicated infrastructure for site breakage (e.g., [uBlock Origin's uAssets tracker](https://github.com/uBlockOrigin/uAssets)). 
+   * **Official reporting channels:** Extension projects maintain dedicated infrastructure for site breakage (e.g., [uBlock Origin's uAssets tracker](https://github.com/uBlockOrigin/uAssets)).
 
 2. **Actionability & Triage Quality:**  
-   Logging user-installed extension breakage in a browser-focused repository creates noise that cannot be resolved at the browser level.
-
----
-
-### ⚠️ The One Exception: Pre-installed Default Functional Add-ons
-
-An add-on-related issue **MAY** be reported to WILB **only if**:
-- The extension/add-on is **bundled and enabled by default** in the clean, stock installation of the libre browser (e.g., **GNU LibreJS in GNU IceCat**).
-- The add-on actively interacts with web page content or network traffic (e.g., script blockers, header modifiers). *Visual themes, language packs, and search engines are strictly excluded.*
-- The site barrier occurs on a **fresh user profile using both the browser's and the WebExtension's default configuration**, without any modified settings, custom rules/filters, or added third-party extensions.
-
-> **Note on Reporting:** When filing an issue caused by a pre-installed add-on, please specify if the site functions when that default add-on is temporarily disabled. This helps isolate whether the barrier is caused by site-side script requirements or browser-level User-Agent/engine policies.
+   Logging user-installed extension breakage in a browser-focused registry creates noise that cannot be resolved at the browser or site-compat level.
 
 ---
 
